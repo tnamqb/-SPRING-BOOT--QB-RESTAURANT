@@ -1,0 +1,17 @@
+.quantity button {
+    background: none;
+    border: none;
+}
+
+
+.quantity {
+    text-align: center;
+}
+
+.money {
+    text-align: end;
+}
+
+.customModal{
+
+}

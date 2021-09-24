@@ -1,0 +1,296 @@
+/* reponsive */
+
+/* for ipad pro */
+@media screen and (max-width: 1024px) {
+    .modal-content{
+        height: 40% !important;
+    }
+    .container{
+        width: 100%;
+        height: 530px;
+        margin-top: 20px;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        /* border-right: none; */
+    }
+
+    .bill-container{
+        height: 23vh;
+    }
+
+    .sub-container{
+        /* display: none; */
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }
+
+    .navbar{
+        /* display: none; */
+        display: flex;
+        flex-direction: row;
+    }
+
+    .product-text > h3{
+        display: flex;
+        position: relative;
+        top: 17rem;
+        justify-content: center;
+        
+    }
+
+    .menu{
+        position: relative;
+        top: 260px;
+        height: 55%;
+    }
+
+    .sub-container ul {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        bottom: -49px;
+    }
+
+    .logout{
+        width: 100px;
+        bottom: -84px;
+        position: relative;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .clas{
+        display: flex;
+        position: relative;
+        bottom: 50px;
+        justify-content: space-around;
+    }
+
+    .sub-ul{
+        width: 10rem;
+    }
+
+
+    .product{
+        /* border: none; */
+        position: relative;
+        /* top: 56px; */
+        bottom: 80px;
+    }
+
+    .product-search{
+        display: none;
+    }
+
+    .product-title{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .modal-content{
+        display: flex;
+        flex-direction: column !important;
+        overflow-y: scroll;
+    }
+
+    .categories{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .modal-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-body{
+        border-right: none !important ;
+    }
+    
+    .modal-body1{
+        margin: auto;
+        width: 45% !important;
+        position: relative;
+        bottom: 90px;
+        /* height: 30vh; */
+    }
+
+    .food-information{
+        width: 100%;
+        height: 17vh;
+    }
+
+
+    .table-action{
+        position: relative;
+        top: 245px;
+        /* left: 2px; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .table-action a {
+        font-size: 12px;
+    }
+
+    .change-action,
+    .merge-action{
+        width: 10%;
+    }
+
+    .merge-action{
+        margin: 0;
+        margin-top: 3px;
+    }
+
+    .payment{
+        width: 100%;
+        height: auto;
+    }
+
+    .btn-bill{
+        width: 50%;
+        border-radius: 10px;
+    }
+}
+
+
+@media screen and (max-width:992px) {
+    .product{
+        position: relative;
+        bottom: 170px;
+        border: none;
+    }
+    
+    .modal-content{
+        height: 100% !important;
+    }
+    
+    .bill-container{
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .modal-content{
+        height: 50%;
+    }    
+}
+
+/* for ipad */
+@media screen and (max-width:768px) {
+    .container{
+        background: url(asset/img/logo.png) no-repeat center center / cover;
+        border: none;
+    }
+
+    .modal-content{
+        height: 50% !important;
+    }
+
+    .modal-body1{
+        bottom: 105px;
+        width: 55% !important;
+    }
+
+    .sub-container ul{
+        flex-direction: row;
+        position: relative;
+        bottom: -49px;
+    }
+
+    .product{
+        position: relative;
+        bottom: 220px;
+        border: none;
+    }
+
+    .food-information{
+        height: 12vh;
+    }
+
+    .bill-container{
+        height: 21vh;
+    }
+
+    .btn-bill{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:540px) {
+    .container{
+        width: 95% !important;
+        
+    }
+
+    .product-text > h3{
+        font-size: 40px;
+        padding: 0;
+    }
+
+    .product{
+        bottom: 270px;
+    }
+
+    .btn-bill{
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width: 507px) {
+    .btn-bill{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 495px) {
+    .btn-bill{
+        padding: 0;
+        width: 70%;
+    }    
+}
+
+@media screen and (max-width: 371px) {
+    .btn-bill{
+        width: 80%;
+    }
+    
+}
+
+/* for motorolar g4 */
+@media screen and (max-width: 360px) {
+    .drink-container{
+        height: 45px;
+    }
+    .modal-body1{
+        width: 100% !important;
+        position: relative;
+        bottom: 87px;
+    }
+
+    .table-action{
+        position: relative;
+        top: 390px;
+        left: 2px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .btn-bill{
+        padding: 0;
+    }
+}
+
+@media screen and (max-height: 548px) {
+    .modal-content{
+        height: 100% !important;
+    }    
+}

@@ -1,0 +1,45 @@
+
+F
+java:S3740Ä"/Provide the parametrized type for this generic.(ÑÀá 
+V
+java:S4684/"@Replace this persistent entity with a simple POJO or DTO object.(îïÈÖ
+L
+java:S2696E"6Make the enclosing method "static" or remove this set.(Êû°´
+Q
+java:S2696M"6Make the enclosing method "static" or remove this set.(—Ú¼ïşÿÿÿÿ
+]
+java:S1126Z"BReplace this if-then-else statement by a single method invocation.(œŞ…‘ıÿÿÿÿ
+[
+java:S4684l"@Replace this persistent entity with a simple POJO or DTO object.(Ì“Àùÿÿÿÿ
+X
+java:S1854Ÿ"ARemove this useless assignment to local variable "orderDetails2".(‘Ú´
+I
+java:S1481Ÿ"2Remove this unused "orderDetails2" local variable.(‘Ú´
+W
+java:S4684¿"@Replace this persistent entity with a simple POJO or DTO object.(Á¹„Î
+p
+java:S1128"URemove this unused import 'com.codegym.restaurant.repository.IOrderDetailRepository'.(Ã¡€ğıÿÿÿÿ
+F
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
+E
+java:S1128"/Remove this unused import 'java.util.Iterator'.(¥ÍòÕ
+F
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
+k
+java:S1192&"PDefine a constant instead of duplicating this literal "/dashboard/desk" 3 times.(•‰š“üÿÿÿÿ
+T
+java:S3655™"=Call "orderOptional2.isPresent()" before accessing the value.(Æ¥ Ú
+J
+java:S3655³"3Call "desk.isPresent()" before accessing the value.(‘…’œ
+N
+java:S3655‰"7Call "Optional#isPresent()" before accessing the value.(®¦Ãº
+T
+java:S3655˜"=Call "orderOptional1.isPresent()" before accessing the value.(›•¹Ê
+N
+java:S3655‡"7Call "Optional#isPresent()" before accessing the value.(¬£²å
+X
+java:S3655É"<Call "orderOptional.isPresent()" before accessing the value.(õÒ•¥ûÿÿÿÿ
+N
+java:S3655Æ"7Call "Optional#isPresent()" before accessing the value.(šŞ Û
+`
+java:S2583›"DChange this condition so that it does not always evaluate to "false"(‹ì§ßûÿÿÿÿ
