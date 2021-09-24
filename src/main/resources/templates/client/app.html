@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/app/asset/style/table.css">
+    <link rel="stylesheet" href="/app/asset/style/test.css">
+    <link rel="stylesheet" href="/app/asset/style/media.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/app/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/app/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="/app/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/app/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="/app/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/app/vendor/aos/aos.css" rel="stylesheet">
+
+    <style>
+        .modal{
+         padding: 0 !important;
+        }
+        .modal-dialog {
+          max-width: 85% !important;
+          height: 90%;
+          padding: auto;
+          margin: auto;
+          margin-top:2rem;
+          overflow: hidden;
+        }
+
+        .modal-content {
+          height: 100%;
+          flex-direction: row;
+        }
+
+        .col-sm-4 {
+            height: 100%;
+        }
+        .col-sm-8 {
+            height: 100%;
+        } 
+        #one{
+            background-color: #ccc;
+            width: 50px;
+        }
+        #two{
+            background-color: #000;
+            width: 50px;
+        }
+
+        .row{
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .modal-body{
+            width: 100%;
+            border-right: 1px #ccc solid;
+        }
+
+        .modal-body1{
+            width: 40%;
+            /* display: none; */
+        }
+    </style>
+</head>
+<body>
+    <!-- Parent div container -->
+    <div class="container">
+        <div class="sub-container">
+            <div class="navbar">
+                <ul>
+                    <div>
+                        <img class="logo" src="/app/asset/img/logo.png" alt="">
+                    </div>
+                </ul>
+                <div class="clas">
+                        <ul class="sub-ul" id="myDiv">
+                            <a href="#table"></a><li class="btn active"><i class="fas fa-table"></i>Table</li></a>
+                            <a href="#product"></a><li class="btn"><i class="fas fa-cog"></i>Setting</li></a>
+                        </ul>
+                    <div class="text-center border rounded-circle" id="userInformation">
+                        <h5><span th:text="${userInfo}" th:value="${userInfo}" id="userInfo"></span></h5>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="logout">
+                        <a th:href="@{/logout}"><i class="fas fa-sign-out-alt">Logout</i></a>
+                    </div>
+                </div>        
+            </div>
+        </div>
+
+            <!-- Title QuangBinh Restaurant -->
+        <section class="product" id="product">
+            <div class="product-title">
+                <div class="product-text">
+                    <h3>QuangBinh Restaurant</h3>
+                </div>
+
+                <div class="product-search">
+                    <input type="text" class="input" placeholder="Search...">
+                    <button class="btnn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Menu display foods -->
+            <div class="menu">
+                    <div class="page"><!-- 
+                        <h1>Table</h1> -->
+                        <div id="show"></div>
+                    </div>
+            </div>
+        </section>
+        <!-- Modal: modalQuickView -->
+        <div class="modal fade" id="modalQuickView" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body ">
+                    <div class="modal-header">
+                        <p class="second-text">Choose category</p>
+                    </div>
+                        <div class="">
+                            <div class="categories" id="categories">
+                                <div class="category btn activee" style="padding: 0;" onclick="getAllProduct()">
+                                    <div class="category-title">
+                                        <p>All</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="food-information">
+
+                            </div>
+                        </div>
+
+                        <div class="table-action">
+                            <a class="change-action" href="">Đổi bàn</a>
+                            <a class="merge-action" href="">Gộp bàn</a>
+                        </div>
+
+                </div>
+
+                <div class="modal-body modal-body1">
+                    <p class="first-text">Thông tin bàn</p>
+                    <section class="payment">
+                        <p>Hóa đơn</p>
+                        <div class="bill-container">
+
+                            <div class="sub-bill">
+
+                            </div>
+
+                            <div class="sub-bill">
+
+                            </div>
+
+                            <div class="sub-bill">
+
+                            </div>
+                        </div>
+
+                            <!-- <div class="subtotal-text"><h5>Phương thức thanh toán</h5></div> -->
+                            <button class="btn-bill mb-2">Thanh toán</button>
+                    </section>
+                </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- End Modal: modalQuickView -->
+                    </div>
+      <!--Footer-->
+    </div>
+
+</body>
+<script src="/app/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/app/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/app/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="/app/assets/vendor/php-email-form/validate.js"></script>
+<script src="/app/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+<script src="/app/assets/vendor/counterup/counterup.min.js"></script>
+<script src="/app/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="/app/assets/vendor/venobox/venobox.min.js"></script>
+<script src="/app/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="/app/assets/vendor/typed.js/typed.min.js"></script>
+<script src="/app/assets/vendor/aos/aos.js"></script>
+<script src="/app/asset/script/main.js"></script>
+<script src="/app/asset/script/js.js"></script>
+<script src="/app/asset/script/table.js"></script>
+</html>
